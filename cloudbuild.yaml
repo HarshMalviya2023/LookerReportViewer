@@ -5,8 +5,8 @@ steps:
   id: 'push-gcloud-source-repository'
   waitFor: ['-']
 steps:
-- name: "gcr.io/cloud-builders/mvn"
-  args: ["clean", "package","appengine:deploy"]
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app","deploy"]
   id: 'deploying-to-appengine'
   waitFor: ['push-gcloud-source-repository']
   
