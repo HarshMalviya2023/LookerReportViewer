@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add looker report</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+ 
+  <a class="navbar-brand" href="#">Looker Reports</a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link"  th:href = "@{/}" >Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active"  th:href = "@{/showNewForm}" >Add Reports</a>
+    </li>
+    
+  </ul>
+</nav>
+
+<div class="container">
+<h1>Reports looker</h1>
+<hr>
+<h2>Save Report</h2>
+
+<form action="#" th:action="@{/addfield}" th:object="${field}"
+method="POST">
+<input type="text" th:field="*{url}"
+placeholder="Add Url" class="form-control mb-4 col-4">
+
+<input type="text" th:field="*{description}"
+placeholder="Add description" class="form-control mb-4 col-4">
+
+
+
+<button type="submit" class="btn btn-info btn-sm"> Save Report</button>
+</form>
+
+
+</div>
+</body>
+</html>

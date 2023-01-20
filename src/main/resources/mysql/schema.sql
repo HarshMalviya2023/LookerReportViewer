@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS fields (
+  id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  url VARCHAR(1600),
+  description VARCHAR(30)
+  
+) engine=InnoDB;
