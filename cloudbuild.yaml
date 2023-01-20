@@ -1,10 +1,9 @@
 steps:
 #First Clone from Google Cloud Source Repository  
 - name: 'gcr.io/cloud-builders/git'
-  args: ['clone','https://source.developers.google.com/p/learning-313419/r/github_harshmalviya2023_report']
+  args: ['clone','https://source.developers.google.com/p/${_PROJECT}/r/${_REPO_NAME}']
   id: 'push-gcloud-source-repository'
-
- steps:
+steps:
 - name: "gcr.io/cloud-builders/mvn"
   args: ["clean", "package","appengine:deploy"]
   id: 'deploying-to-appengine'
