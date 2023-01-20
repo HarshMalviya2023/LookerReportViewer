@@ -3,7 +3,7 @@ steps:
 - name: 'gcr.io/cloud-builders/git'
   args: ['clone','https://source.developers.google.com/p/learning-313419/r/github_harshmalviya2023_report']
   id: 'push-gcloud-source-repository'
-  waitFor: ['-']
+
  steps:
 - name: "gcr.io/cloud-builders/mvn"
   args: ["clean", "package","appengine:deploy"]
