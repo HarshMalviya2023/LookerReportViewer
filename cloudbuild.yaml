@@ -1,12 +1,6 @@
 steps:
-#First Clone from Google Cloud Source Repository  
-- name: 'gcr.io/cloud-builders/git'
-  args: ['clone','https://source.developers.google.com/p/${_PROJECT}/r/${_REPO_NAME}']
-  id: 'push-gcloud-source-repository'
-  waitFor: ['-']
-steps:
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["app","deploy"]
-  id: 'deploying-to-appengine'
-  waitFor: ['push-gcloud-source-repository']
-  
+- name: 'gcr.io/cloud-builders/mvn'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/report', '.']
+images: ['gcr.io/$PROJECT_ID/report']
