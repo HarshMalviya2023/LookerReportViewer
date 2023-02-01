@@ -41,8 +41,14 @@ public class FieldController {
 	@GetMapping("/")
 	public String findAllFields(Model model){
 		model.addAttribute("listReports",service.getAllFields());
+		return "home";
+	}
+	@GetMapping("/reports")
+	public String findAllField(Model model){
+		model.addAttribute("listReports",service.getAllFields());
 		return "reports";
 	}
+
 	
 //	@GetMapping("/report/{id}")
 //	public Fields findFieldById(@PathVariable int id) {
@@ -62,7 +68,7 @@ public class FieldController {
 	@GetMapping("/delete/{id}")
 	public String deleteField(@PathVariable (value="id") int id) {
 		this.service.deleteField(id);
-		return "redirect:/";
+		return "redirect:/reports";
 	}
 	
 	
