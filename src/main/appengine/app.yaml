@@ -1,4 +1,4 @@
-service: looker-report
+# service: looker-report
 
 runtime: java11
 instance_class: F2
