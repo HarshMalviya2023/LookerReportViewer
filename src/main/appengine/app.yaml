@@ -1,5 +1,5 @@
 service: looker-report
-version: v2
+
 runtime: java11
 instance_class: F2
 service_account: 19905437363@cloudbuild.gserviceaccount.com
