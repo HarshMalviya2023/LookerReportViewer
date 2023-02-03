@@ -30,5 +30,5 @@ body {
     }
 } </style><body><div class="d-flex" id="wrapper"><!-- Sidebar --><!-- /#sidebar-wrapper --><!-- Page Content --><div id="page-content-wrapper"><nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom"><a class="navbar-brand" th:href = "@{/}">&#9776;&nbsp;  Looker Reports</a><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto mt-2 mt-lg-0 "><li class="nav-item "><a class="nav-link" th:href = "@{/}" >Home </a></li><li class="nav-item"><a class="nav-link"  th:href = "@{/allReports}">Reports</a></li><li class="nav-item active"><a class="nav-link"  th:href = "@{/showNewForm}">Add Reports</a></li></ul></div></nav><div class="container-fluid"><h1 class="mt-4">Save Report</h1><br><form action="#" th:action="@{/addfield}" th:object="${field}"
                 method="POST"><input type="text" th:field="*{url}"
-                placeholder="Add Url" class="form-control mb-4 col-4"><input type="text" th:field="*{description}"
-                placeholder="Add description" class="form-control mb-4 col-4"><button type="submit" class="btn btn-info btn-sm"> Save Report</button></form></div></div><!-- /#page-content-wrapper --></div></body></html>
+                placeholder="Add Url" class="form-control mb-4 col-4" required><input type="text" th:field="*{description}"
+                placeholder="Add description" class="form-control mb-4 col-4" required><button type="submit" class="btn btn-info btn-sm"> Save Report</button></form></div></div><!-- /#page-content-wrapper --></div></body></html>
