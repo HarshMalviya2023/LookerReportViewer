@@ -29,7 +29,7 @@ public class FieldController {
 	public String showNewForm(Model model){
 		Fields field=new Fields();
 		model.addAttribute("field",field);
-		return "new_field";
+		return "addReport";
 	}
 	
 	@PostMapping("/addfield")
@@ -41,12 +41,12 @@ public class FieldController {
 	@GetMapping("/")
 	public String findAllFields(Model model){
 		model.addAttribute("listReports",service.getAllFields());
-		return "home";
+		return "homePage";
 	}
-	@GetMapping("/reports")
+	@GetMapping("/allReports")
 	public String findAllField(Model model){
 		model.addAttribute("listReports",service.getAllFields());
-		return "reports";
+		return "allReports";
 	}
 
 	
@@ -68,7 +68,7 @@ public class FieldController {
 	@GetMapping("/delete/{id}")
 	public String deleteField(@PathVariable (value="id") int id) {
 		this.service.deleteField(id);
-		return "redirect:/reports";
+		return "redirect:/allReports";
 	}
 	
 	
