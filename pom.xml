@@ -9,7 +9,7 @@
 		
 	</parent>
 	<groupId>com.gcp</groupId>
-	<artifactId>report</artifactId>
+	<artifactId>lookerReport</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>report</name>
 	<description>project for Spring Boot gcp report</description>
