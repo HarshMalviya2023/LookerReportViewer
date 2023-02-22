@@ -1,10 +1,17 @@
-CloudBuild Pipeline for deploying a JAVA based web application on App Engine Service
+CloudBuild Pipeline for deploying a JAVA based looker report viewer web application on App Engine Service
 =================================================================================
 Any changes push to GitHub main branch it automatically build and deploy the code to App Engine
 
 Command to deploy on cloud from local:
 ==========================
 mvn clean package appengine:deploy
+
+Command to run on local:
+==========================
+mvn package
+
+mvn spring-boot:run
+
 
 Files:
 ==========================
