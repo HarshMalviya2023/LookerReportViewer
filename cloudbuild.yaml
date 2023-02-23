@@ -2,7 +2,7 @@
 # - name: 'gcr.io/cloud-builders/mvn'
 #   args: ['install']
 # - name: 'gcr.io/cloud-builders/docker'
-#   args: ['build', '--tag=gcr.io/$PROJECT_ID/report', '.']
+#   args: ['build', '--tag=gcr.io/$PROJECT_ID/report', '/workspace/Dockerfile/']
 # images: ['gcr.io/$PROJECT_ID/report']
 steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
